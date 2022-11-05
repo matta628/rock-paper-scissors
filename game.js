@@ -18,7 +18,7 @@ function playRound(playerChoice, computerChoice){
     else if (playerChoice == "Rock" && computerChoice == "Scissors" ||
         playerChoice == "Scissors" && computerChoice == "Paper" ||
         playerChoice == "Paper" && computerChoice == "Rock"){
-        return `Player wins ! ${playerChoice} beats ${computerChoice}`;
+        return `You won! ${playerChoice} beats ${computerChoice}`;
     }
     return `Computer wins! ${computerChoice} beats ${playerChoice}`;
 }
@@ -30,7 +30,7 @@ function game(){
         playerChoice = prompt("Choose rock paper or scissors!","").trim();
         let result = playRound(playerChoice, getComputerChoice());
         console.log(result);
-        if (result.charAt(0) == "P") playerScore++;
+        if (result.charAt(0) == "Y") playerScore++;
         if (result.charAt(0) == "C") computerScore++;
         console.log(`\tPlayer: ${playerScore}\tComputer: ${computerScore}`);
     }

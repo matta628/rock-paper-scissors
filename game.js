@@ -9,3 +9,16 @@ function getComputerChoice(){
     }
     return "Scissors";
 }
+
+function playRound(playerChoice, computerChoice){
+    playerChoice = playerChoice.slice(0,1).toUpperCase() + playerChoice.slice(1).toLowerCase();
+    if (playerChoice == computerChoice){
+        return "Tie Game!";
+    }
+    else if (playerChoice == "Rock" && computerChoice == "Scissors" ||
+        playerChoice == "Scissors" && computerChoice == "Paper" ||
+        playerChoice == "Paper" && computerChoice == "Rock"){
+        return `You win! ${playerChoice} beats ${computerChoice}`;
+    }
+    return `You lose! ${computerChoice} beats ${playerChoice}`;
+}

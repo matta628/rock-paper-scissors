@@ -18,7 +18,20 @@ function playRound(playerChoice, computerChoice){
     else if (playerChoice == "Rock" && computerChoice == "Scissors" ||
         playerChoice == "Scissors" && computerChoice == "Paper" ||
         playerChoice == "Paper" && computerChoice == "Rock"){
-        return `You win! ${playerChoice} beats ${computerChoice}`;
+        return `Player wins! ${playerChoice} beats ${computerChoice}`;
     }
-    return `You lose! ${computerChoice} beats ${playerChoice}`;
+    return `Computer wins! ${computerChoice} beats ${playerChoice}`;
+}
+
+function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++){
+        playerChoice = prompt("Choose rock paper or scissors!","").trim();
+        let result = playRound(playerChoice, getComputerChoice());
+        console.log(result);
+        if (result.charAt(0) == "P") playerScore++;
+        if (result.charAt(0) == "C") computerScore++;
+        console.log(`\tPlayer: ${playerScore}\tComputer: ${computerScore}`);
+    }
 }

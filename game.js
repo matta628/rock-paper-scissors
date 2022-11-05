@@ -13,12 +13,12 @@ function getComputerChoice(){
 function playRound(playerChoice, computerChoice){
     playerChoice = playerChoice.slice(0,1).toUpperCase() + playerChoice.slice(1).toLowerCase();
     if (playerChoice == computerChoice){
-        return "Tie Game!";
+        return "It's a tie!";
     }
     else if (playerChoice == "Rock" && computerChoice == "Scissors" ||
         playerChoice == "Scissors" && computerChoice == "Paper" ||
         playerChoice == "Paper" && computerChoice == "Rock"){
-        return `Player wins! ${playerChoice} beats ${computerChoice}`;
+        return `Player wins ! ${playerChoice} beats ${computerChoice}`;
     }
     return `Computer wins! ${computerChoice} beats ${playerChoice}`;
 }
@@ -33,5 +33,14 @@ function game(){
         if (result.charAt(0) == "P") playerScore++;
         if (result.charAt(0) == "C") computerScore++;
         console.log(`\tPlayer: ${playerScore}\tComputer: ${computerScore}`);
+    }
+    if (playerScore == computerScore){
+        console.log("No one won this game. But no won lost either!")
+    }
+    else if (playerScore > computerScore){
+        console.log("You beat the computer yasssss")
+    }
+    else{
+        console.log("Nice one. Got beat by a hunk of metal...")
     }
 }

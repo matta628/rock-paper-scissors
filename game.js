@@ -23,6 +23,9 @@ function playRound(playerChoice, computerChoice){
     return `Computer wins! ${computerChoice} beats ${playerChoice}`;
 }
 
+let playerScore = 0;
+let computerScore = 0;
+
 const buttons = document.querySelectorAll('button');
 console.log(buttons);
 buttons.forEach((button) => {
@@ -30,12 +33,16 @@ buttons.forEach((button) => {
         let roundResult = playRound(button.textContent,getComputerChoice());
         const divResults = document.querySelector('.results');
         divResults.textContent = roundResult;
+        if (roundResult.charAt(0) == "Y") playerScore++;
+        if (roundResult.charAt(0) == "C") computerScore++;
+        const playerDiv = document.querySelector('.player');
+        playerDiv.textContent = `Player: ${playerScore}`;
+        const computerDiv = document.querySelector('.computer');
+        computerDiv.textContent = `Computer: ${computerScore}`;
     });
 });
 
 function game(){
-    let playerScore = 0;
-    let computerScore = 0;
     for (let i = 0; i < 5; i++){
         playerChoice = prompt("Choose rock paper or scissors!","").trim();
         let result = playRound(playerChoice, getComputerChoice());

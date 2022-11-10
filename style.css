@@ -56,3 +56,10 @@ button{
     font-size: 20px;
     background-color: #787D12;
 }
+.reset {
+    margin: 25px 0px;
+}
+.reset button{
+    height: 50px;
+    width: auto;
+}

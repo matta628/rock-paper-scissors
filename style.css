@@ -1,3 +1,15 @@
+body {
+    background-color  : darkolivegreen;
+    color: #ECF87F;
+}
+button{
+    background-color : #013A20;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    color: #ECF87F;
+
+}
 .game {
     display: flex;
     flex-direction: column;
@@ -17,4 +29,9 @@
 .player,
 .computer{
     border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    background-color: #787D12;
+
+    ;
 }

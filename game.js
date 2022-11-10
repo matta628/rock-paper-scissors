@@ -23,21 +23,21 @@ function playRound(){
 
     const resultsDiv = document.querySelector('.results');
     if (playerChoice == computerChoice){
-        resultsDiv.textContent = "It's a tie!";
+        resultsDiv.innerText = "It's a tie!";
     }
     else if (playerChoice == "Rock" && computerChoice == "Scissors" ||
             playerChoice == "Scissors" && computerChoice == "Paper" ||
             playerChoice == "Paper" && computerChoice == "Rock"){
         playerScore++;
         const playerDiv = document.querySelector('.player');
-        playerDiv.textContent = `Player: ${playerScore}`;
-        resultsDiv.textContent = playerScore == 5 ? 
+        playerDiv.innerText = `Player\n ${playerScore}`;
+        resultsDiv.innerText = playerScore == 5 ? 
         "YOU WON THE GAME YASSSSSS" : `Big L! ${playerChoice} beats ${computerChoice}`;
     }else{
         computerScore++;
         const computerDiv = document.querySelector('.computer');
-        computerDiv.textContent = `Computer: ${computerScore}`;
-        resultsDiv.textContent = computerScore == 5 ?
+        computerDiv.innerText = `Computer\n${computerScore}`;
+        resultsDiv.innerText = computerScore == 5 ?
         "THE HUNK OF METAL BEAT YOU..." : `Computer W! ${computerChoice} beats ${playerChoice}`;
     }
 

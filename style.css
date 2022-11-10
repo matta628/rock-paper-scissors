@@ -1,6 +1,20 @@
 body {
     background-color  : darkolivegreen;
     color: #ECF87F;
+    font-family: American Typewriter, serif;
+}
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p {
+    font-size: 20px;
+}
+.choices{
+    margin: 25px;
+    display: flex;
+    gap: 50px;
 }
 button{
     background-color : #013A20;
@@ -8,30 +22,37 @@ button{
     height: 100px;
     font-size: 20px;
     color: #ECF87F;
-
+    border-radius: 15px;
+    font-family: American Typewriter, serif;
 }
-.game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.results{
+    margin: 25px 0px;
+    font-size: 25px;
 }
 .score-container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.score-title{
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 5px;
+}
 .scores{
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 25px;
 }
 .player,
 .computer{
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(0, 58, 0);
     width: 100px;
+    height: 75px;
     text-align: center;
+    font-size: 20px;
     background-color: #787D12;
-
-    ;
 }

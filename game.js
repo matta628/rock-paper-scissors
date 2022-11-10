@@ -23,6 +23,15 @@ function playRound(playerChoice, computerChoice){
     return `Computer wins! ${computerChoice} beats ${playerChoice}`;
 }
 
+const buttons = document.querySelectorAll('button');
+console.log(buttons);
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let roundResult = playRound(button.textContent,getComputerChoice());
+        console.log(roundResult);
+    });
+});
+
 function game(){
     let playerScore = 0;
     let computerScore = 0;

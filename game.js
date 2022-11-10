@@ -28,7 +28,8 @@ console.log(buttons);
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let roundResult = playRound(button.textContent,getComputerChoice());
-        console.log(roundResult);
+        const divResults = document.querySelector('.results');
+        divResults.textContent = roundResult;
     });
 });
 
